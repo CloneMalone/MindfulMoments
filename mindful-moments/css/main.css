@@ -1,0 +1,182 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color Palette */
+:root {
+    --background-color: #303147;
+    --header-text-color: #FAFCFD;
+    --purple-card-gradient-left: #7751E7;
+    --purple-card-gradient-right: #8D6AEC;
+    --dark-card-gradient-left: #36344E;
+    --dark-card-gradient-right: #464064;
+    --mood-entry-card-text: #C0B5EC;
+    --leafy-green: #16ca16ee;
+    --danger-red: red;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Content Styling */
+body {
+    font-family: "Nunito", sans-serif;
+    background-color: var(--background-color);
+}
+
+
+h2,
+h1,
+label {
+    color: var(--header-text-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: var(--purple-card-gradient-left);
+}
+
+.nav-link-container a {
+    color: var(--header-text-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    padding: 5px 10px;
+    transition-duration: .2s;
+}
+
+.nav-link-container a:hover {
+    background-color: var(--header-text-color);
+    color: var(--purple-card-gradient-right);
+}
+
+.nav-link-container {
+    display: flex;
+    gap: 15px;
+}
+
+/* Form and label container */
+.form-label-and-input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+/* Form input styling */
+.form-label-and-input-container input {
+    font-family: "Nunito", sans-serif;
+    padding: 10px 14px;
+    margin-top: 5px;
+    border: 2px solid var(--purple-card-gradient-right);
+    border-radius: 6px;
+    background: linear-gradient(to right, var(--dark-card-gradient-left), var(--dark-card-gradient-right));
+    color: var(--header-text-color);
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.form-label-and-input-container select {
+    font-family: "Nunito", sans-serif;
+    padding: 10px 14px;
+    margin-top: 5px;
+    border: 2px solid var(--purple-card-gradient-right);
+    border-radius: 6px;
+    background: linear-gradient(to right, var(--dark-card-gradient-left), var(--dark-card-gradient-right));
+    color: #a287ec;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.form-label-and-input-container textarea {
+    font-family: "Nunito", sans-serif;
+    padding: 10px 14px;
+    margin-top: 5px;
+    border: 2px solid var(--purple-card-gradient-right);
+    border-radius: 6px;
+    background: linear-gradient(to right, var(--dark-card-gradient-left), var(--dark-card-gradient-right));
+    color: var(--header-text-color);
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+
+
+/* Prevent white background on autocomplete */
+.form-label-and-input-container input:-webkit-autofill,
+.form-label-and-input-container input:-webkit-autofill:focus,
+.form-label-and-input-container input:-webkit-autofill:hover,
+.form-label-and-input-container input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px var(--dark-card-gradient-left) inset !important;
+    -webkit-text-fill-color: var(--header-text-color) !important;
+    transition: background-color 5000s ease-in-out 0s;
+    caret-color: var(--header-text-color);
+}
+
+.form-label-and-input-container input:focus {
+    border-color: var(--purple-card-gradient-left);
+    box-shadow: 0 0 0 2px var(--purple-card-gradient-left, #7751E7);
+}
+
+footer {
+    text-align: center;
+    color: var(--header-text-color);
+    margin-top: 2rem;
+}
+
+
+/* ANIMATIONS */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+
+
+@keyframes fade-in-from-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+     
+}
+
+@keyframes fade-up-then-down {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+
